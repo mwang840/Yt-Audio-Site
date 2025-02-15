@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Audio Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h1>Youtube to Audio Converter Site</h1>
+<h2>Welcome to the website</h2>
+<h3>In this website, this website will convert youtube links into mp3 files and have the ability to download them.</h3>
+<h3>Enter your youtube link here and press this button to download!</h3>
+<div class="youtube-link">
+    <form method="POST" action="/download">
+    <label>Youtube link</label>
+    <br/>
+    <input type="text" id="ytlink" name="ytlink">
+    <button>Download</button>
+    </form>
+</div>
+</body>
+</html>
+</html>
