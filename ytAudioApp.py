@@ -4,7 +4,7 @@ import requests
 import os
 
 #sets the downloaded file to the downloads folder
-DOWNLOAD_FOLDER = "downloads"
+DOWNLOAD_FOLDER = "/tmp/downloads"
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
 
 def downloadYtVideo(ytLink: str):
