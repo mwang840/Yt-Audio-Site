@@ -1,4 +1,4 @@
-<h1 text-align="center">Youtube Video Downloader Websiter</h1>
+<h1 text-align="center">Youtube Video Downloader Website</h1>
 
 ## About:    
 A flask website of downloading youtube videos to mp3 file format.
