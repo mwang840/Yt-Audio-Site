@@ -57,7 +57,7 @@ def render_website():
      return render_template("index.html")
 
 
-@app.route("/download", methods=["POST"])
+@app.route("/tmp/downloads", methods=["POST"])
 def download_vid():
      """
      When the User clicks the button to download the video, the data from the form gets sent
