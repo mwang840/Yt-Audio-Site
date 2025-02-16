@@ -4,8 +4,12 @@ import requests
 import os
 
 #sets the downloaded file to the downloads folder
-DOWNLOAD_FOLDER = "/tmp/downloads"
+DOWNLOAD_FOLDER = "downloads"
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
+
+#Sets up the port
+SERVER_IP = "0.0.0.0"
+PORT = 8000
 
 def downloadYtVideo(ytLink: str):
     """
@@ -57,7 +61,7 @@ def render_website():
      return render_template("index.html")
 
 
-@app.route("/tmp/downloads", methods=["POST"])
+@app.route("/download", methods=["POST"])
 def download_vid():
      """
      When the User clicks the button to download the video, the data from the form gets sent
@@ -89,5 +93,5 @@ def main():
 
 #Runs the flask application
 if __name__ in "__main__":
-     app.run(host="localhost", debug=True)
+     app.run(host="localhost", debug=True, host=SERVER_IP, port=PORT)
     
