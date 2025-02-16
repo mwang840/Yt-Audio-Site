@@ -93,5 +93,5 @@ def main():
 
 #Runs the flask application
 if __name__ in "__main__":
-     app.run(host="localhost", debug=True, host=SERVER_IP, port=PORT)
+     app.run(debug=True, host=SERVER_IP, port=PORT)
     
