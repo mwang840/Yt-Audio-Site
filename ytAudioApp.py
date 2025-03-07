@@ -46,8 +46,8 @@ def downloadYtVideo(ytLink: str):
             '''
         except:
                 print("Video Failed, please try again!")
-                return "Downloading video failed", 500
-    return
+                return None
+    return None
 
 #Start the Flask Application
 app = Flask(__name__)
@@ -72,8 +72,11 @@ def download_vid():
      if not ytData:
         return jsonify({"Downloading the video failed or no link provided"}), 400
      downloadedVideo = downloadYtVideo(ytData)
+     print(downloadedVideo)
      if downloadedVideo != None:
           currentFileName = os.path.basename(downloadedVideo)
+          print(type(currentFileName))
+          print(currentFileName)
           return redirect(url_for("return_downloaded_file", filename=currentFileName))
      else:
         return "Downloading video failed", 500
