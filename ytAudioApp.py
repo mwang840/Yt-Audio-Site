@@ -5,7 +5,7 @@ import os
 
 #sets the downloaded file to the downloads folder
 DOWNLOAD_FOLDER = "downloads"
-os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
+os.makedirs(DOWNLOAD_FOLDER, exist_ok=True, mode=0o755)
 
 #Sets up the port
 SERVER_IP = "0.0.0.0"
