@@ -31,7 +31,7 @@ def downloadYtVideo(ytLink: str):
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
         }],
-        'outtmpl': 'Downloads/%(title)s.%(ext)s'
+        'outtmpl': os.path.join(DOWNLOAD_FOLDER, '%(title)s.%(ext)s')
     }
             '''
             Create a YoutubeDL object with the given options passed in, extract the information about the link
