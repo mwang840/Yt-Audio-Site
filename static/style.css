@@ -43,3 +43,12 @@ button{
     cursor: pointer;
     color: black;
 }
+
+.download-program{
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}

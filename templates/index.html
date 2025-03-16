@@ -11,15 +11,16 @@
 <body>
 <h1>Youtube to Audio Converter Site</h1>
 <h2>Welcome to the website</h2>
-<h3>In this website, this website will convert youtube links into mp3 files and have the ability to download them.</h3>
+<h3>This website here, is the website where the gui executable of an Youtube to Audio converter GUI. </h3>
+<h3>The origin behind this project was to extract audio from youtube video without the idea of going to third party websites (with the possibility of the sites stealing your information).</h3>
+<h3>This project also taught me how to use tkinkter as well as getting into GUI Development</h3>
+<h3>As more updates are pushed to the project, I will add newer versions/releases to this site when I can</h3>
+<h3>Click here to download the GUI.</h3>
 <h3>Enter your youtube link here and press this button to download!</h3>
-<div class="youtube-link">
-    <form method="POST" action="/download">
-    <label>Youtube link</label>
-    <br/>
-    <input type="text" id="ytlink" name="ytlink" autocomplete="off">
-    <button>Download</button>
-    </form>
+<div class="download-program">
+    <a href="{{ url_for('download_program') }}">
+        <button>Download Program here!</button>
+    </a>
 </div>
 </body>
 </html>

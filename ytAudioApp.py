@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from yt_dlp import YoutubeDL
 import requests
 import os
+from pathToDownload import filePath
 
 #sets the downloaded file to the downloads folder
 DOWNLOAD_FOLDER = "downloads"
@@ -89,6 +90,12 @@ def return_downloaded_file(filename: str):
      """
      file_path = os.path.join(DOWNLOAD_FOLDER, filename)
      return send_file(file_path, as_attachment=True)     
+
+@app.route("/downloadprogram")
+def download_program():
+     path = filePath
+     return send_file(path, as_attachment=True)
+
 
 def main():
     current_url  = str(input("Enter the url you want to put here\n"))
